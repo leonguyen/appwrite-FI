@@ -1,4 +1,4 @@
-FROM appwrite/appwrite:1.9.1
+FROM appwrite/appwrite:1.8.0
 
 ENV _APP_ENV=production
 
