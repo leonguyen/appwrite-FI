@@ -1,4 +1,4 @@
-app = "appwrite-prod"
+app = "appwrite-fi"
 primary_region = "sin"
 
 [build]
@@ -14,21 +14,7 @@ primary_region = "sin"
 [http_service]
   internal_port = 80
   force_https = true
-  auto_stop_machines = false
-  auto_start_machines = true
-  min_machines_running = 1
 
 [[vm]]
   memory = "4096"
-  cpu_kind = "shared"
   cpus = 4
-
-[checks]
-
-  [checks.health]
-    port = 80
-    type = "http"
-    interval = "30s"
-    timeout = "10s"
-    method = "get"
-    path = "/v1/health"
