@@ -1,20 +1,27 @@
-app = "appwrite-fi"
-primary_region = "sin"
+# fly.toml app configuration file generated for appwrite-fi on 2026-05-09T06:03:22Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'appwrite-fi'
+primary_region = 'sin'
 
 [build]
-  dockerfile = "Dockerfile"
+  dockerfile = 'Dockerfile'
 
 [env]
-  _APP_ENV = "production"
+  _APP_ENV = 'production'
 
 [[mounts]]
-  source = "appwrite_data"
-  destination = "/storage"
+  source = 'appwrite_data'
+  destination = '/storage'
 
 [http_service]
-  internal_port = 80
+  internal_port = 8080
   force_https = true
 
 [[vm]]
-  memory = "4096"
+  memory = '4096'
+  cpu_kind = 'shared'
   cpus = 4
+  memory_mb = 1024
